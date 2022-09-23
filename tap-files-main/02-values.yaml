@@ -1,0 +1,13 @@
+---
+namespace: my-apps
+targetImagePullSecret: registry-credentials
+carbonBlack:
+  configSecret:
+    name: carbonblack-config-secret
+metadataStore:
+  caSecret:
+    importFromNamespace: "" #! since both Carbon Black and Grype both enable store, one must leave importFromNamespace blank
+  #! authSecret is for multicluster configurations.
+  authSecret:
+    #! The name of the secret that contains the auth token to authenticate to the Store Deployment.
+    importFromNamespace: "" #! since both Carbon Black and Grype both enable store, one must leave importFromNamespace blank
