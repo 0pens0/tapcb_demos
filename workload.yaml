@@ -11,4 +11,4 @@ spec:
     git:
       url: https://github.com/0pens0/spring-http
       ref:
-        branch: master
+        branch: main

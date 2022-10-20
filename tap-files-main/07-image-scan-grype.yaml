@@ -1,0 +1,12 @@
+apiVersion: scanning.apps.tanzu.vmware.com/v1beta1
+kind: ImageScan
+metadata:
+  name: sample-grype-public-image-scan
+  namespace: my-apps
+  labels:
+    'app.kubernetes.io/part-of': 'component-a'
+spec:
+  registry:
+    image: "nginx:1.16"
+  scanTemplate: private-image-scan-template
+  scanPolicy: scan-policy
